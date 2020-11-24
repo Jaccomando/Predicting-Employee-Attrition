@@ -31,15 +31,15 @@ We see that 'Age', 'Stockoptionlevel', 'Yearsincurrentrole', 'Totalworkingyears'
 
 ### <center>Attrition by Age</center>
 
-![Attrition by Age]()
+![Attrition by Age](/reports/figures/age_dist.png)
 
 ### <center>Attrition by Stock Options</center>
 
-![Attrition by Stock Options]()
+![Attrition by Stock Options](/reports/figures/stock_dist.png')
 
 ### <center>Attrition by Years in Role</center>
 
-![Attrition by Years in Role]()
+![Attrition by Years in Role](/reports/figures/years_role_dist.png)
 
 ## Pre-processing
 I drop NAs, remove six columns that either contain no unique values, or are not useful for modeling, and convert the target "Attrition" to "Current employee" = 0, and "Voluntary Resignation" = 1. Next the target is split from the data and I create a train test split for training and eventually testing the model. Numeric column are isolated, scaled, and one hot encoded before being rejoined with categorical columns. The training data is then smoted in advance of the first simple model.  
@@ -57,19 +57,19 @@ K - Nearest Neighbor proves to perform best on test data with accuracy of .97 an
 
 ### <center>"K - Nearest Neighbor Confusion Matrix</center>
 
-!["K - Nearest Neighbor Confusion Matrix]()
+!["K - Nearest Neighbor Confusion Matrix](/reports/figures/knn_cm.png')
 
 ## Model Feature Importances
 Of my top three performing models, only Random Forest has a feature importances function from Scikit-learn. It identifies 'Age', 'DailyRate', 'MonthlyIncome', 'DistanceFromHome' and 'JobSatisfaction' as the top 5 feature importances. Assuming that 'DailyRate' and 'MonthlyIncome' are the same, we could find the next highly rated feature importance not related to salary which would be 'TotalWorkingYears'.
 
 ### <center>"Feature Importances Model</center>
 
-!["Feature Importances Model]()
+!["Feature Importances Model](/reports/figures/model_feat.png)
 
 # Summary
 Our initial data exploration finds a close correlation between age and attrition. Additionally it identifies stock option level, years in current role, total working years, and job level as the top five highest correlated features to attrition. Our model feature importances also identify age as a top five feature importance. And if we assume daily rate, monthly income, hourly rate and monthly rate to be highly correlated with each other, then the next highest feature importance becomes total working years. Note that is the fourth highest correlated feature identified in our initial data exploration.
 
-Therefore 
+
 
 
 
