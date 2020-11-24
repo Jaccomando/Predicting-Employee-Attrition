@@ -3,11 +3,11 @@
 # Table of Contents
 
 ### Reports
-- [Presentation Notebook] (https://github.com/Jaccomando/Predicting-Employee-Attrition)
-- [Presentation Slides] (https://github.com/Jaccomando/Predicting-Employee-Attrition)
+- [Presentation Notebook](https://github.com/Jaccomando/Predicting-Employee-Attrition)
+- [Presentation Slides](https://github.com/Jaccomando/Predicting-Employee-Attrition)
 
 ### Exploratory Notebook
-- [EDA] (https://github.com/Jaccomando/Predicting-Employee-Attrition)
+- [EDA](https://github.com/Jaccomando/Predicting-Employee-Attrition)
 
 # Business Understanding 
 Employee churn is a significant expense for companies. The Society for Human Resource Management estimates the average replacement cost of a salaried employee is the equivalent of six to nine months’ salary. Creating a classification model to help better predict when an employee is a flight risk will help management identify flight risk employees before they leave the company allowing for an opportunity to intervene early. This can help reduce employee churn and the the cost of replacing and training new employees.
