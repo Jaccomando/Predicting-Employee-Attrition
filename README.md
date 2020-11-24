@@ -27,7 +27,7 @@ We see that 'Age', 'Stockoptionlevel', 'Yearsincurrentrole', 'Totalworkingyears'
 
 ### <center>Feature Correlations to Attrition</center>
 
-![Feature Correlations to Attrition]()
+![Feature Correlations to Attrition](/reports/figures/corrs.png)
 
 ### <center>Attrition by Age</center>
 
