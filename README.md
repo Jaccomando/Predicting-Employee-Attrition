@@ -31,6 +31,8 @@ We see that 'Age', 'Stockoptionlevel', 'Yearsincurrentrole', 'Totalworkingyears'
 
 ### <center>Attrition by Age</center>
 
+
+
 ![Attrition by Age](/reports/figures/age_dist.png)
 
 ### <center>Attrition by Stock Options</center>
