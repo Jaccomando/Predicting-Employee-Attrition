@@ -37,7 +37,7 @@ We see that 'Age', 'Stockoptionlevel', 'Yearsincurrentrole', 'Totalworkingyears'
 
 ### <center>Attrition by Stock Options</center>
 
-![Attrition by Stock Options](/reports/figures/stock_dist.png')
+![Attrition by Stock Options](/reports/figures/stock_dist.png)
 
 ### <center>Attrition by Years in Role</center>
 
@@ -59,14 +59,14 @@ K - Nearest Neighbor proves to perform best on test data with accuracy of .97 an
 
 ### <center>"K - Nearest Neighbor Confusion Matrix</center>
 
-!["K - Nearest Neighbor Confusion Matrix](/reports/figures/knn_cm.png')
+![K - Nearest Neighbor Confusion Matrix](/reports/figures/knn_cm.png)
 
 ## Model Feature Importances
 Of my top three performing models, only Random Forest has a feature importances function from Scikit-learn. It identifies 'Age', 'DailyRate', 'MonthlyIncome', 'DistanceFromHome' and 'JobSatisfaction' as the top 5 feature importances. Assuming that 'DailyRate' and 'MonthlyIncome' are the same, we could find the next highly rated feature importance not related to salary which would be 'TotalWorkingYears'.
 
 ### <center>"Feature Importances Model</center>
 
-!["Feature Importances Model](/reports/figures/model_feat.png)
+![Feature Importances Model](/reports/figures/model_feat.png)
 
 # Summary
 By using CRISP - DM tecniques and machine learning algorithms I create a binary classification model with .97 accuracy. This model, used alongside an understanding of the business and employee base is helpful in accurately predicting when an employee will voluntarily leave the company. 
