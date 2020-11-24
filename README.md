@@ -67,7 +67,20 @@ Of my top three performing models, only Random Forest has a feature importances 
 !["Feature Importances Model](/reports/figures/model_feat.png)
 
 # Summary
-Our initial data exploration finds a close correlation between age and attrition. Additionally it identifies stock option level, years in current role, total working years, and job level as the top five highest correlated features to attrition. Our model feature importances also identify age as a top five feature importance. And if we assume daily rate, monthly income, hourly rate and monthly rate to be highly correlated with each other, then the next highest feature importance becomes total working years. Note that is the fourth highest correlated feature identified in our initial data exploration.
+By using CRISP - DM tecniques and machine learning algorithms I create a binary classification model with .97 accuracy. This model, used alongside an understanding of the business and employee base is helpful in accurately predicting when an employee will voluntarily leave the company. 
+
+My initial data exploration finds a close correlation between age and attrition. Additionally, it identifies stock option level, years in current role, total working years, and job level as in the top five highest correlated features to attrition. 
+
+My model feature importances also identify age as a top five feature importance. And if we assume daily rate, monthly income, hourly rate and monthly rate to be highly correlated with each other, then the next highest feature importance becomes total working years. Note this is also the fourth highest correlated feature identified in initial data exploration.
+
+# Recommendations
+1. Carefully evaluate employee age. More employee churn occurs between the ages of 25 and 35 years old so a company could focus on employees within that age group to monitor overall satisfaction. 
+2. Total employee total working years should be investigated. Employees with more total working years have more experience which could be used to mentor younger employees. This could even potentially reduce churn in the 25 to 35 age group. 
+3. Employees with no stock option plans churn more than employees with stock option plans. This provides an opportunint. Owning company stock is a siginificant motivator which could improve performance and employee attrition.  
+4. Other features such as job satisfaction, income, distance from home also play a role in employee attrition and should be addressed. 
+
+
+
 
 
 
