@@ -75,7 +75,7 @@ My model feature importances also identify age as a top five feature importance.
 
 # Recommendations
 1. Carefully evaluate employee age. More employee churn occurs between the ages of 25 and 35 years old so a company should focus on employees within that age group to monitor overall satisfaction. 
-2. Look at employee total working years. Employees with more total working years have more experience which could be used to mentor younger employees. This could even potentially reduce churn in the 25 to 35 year old age group. 
+2. Look at employee total working years. Employees with more total working years chrun more but also have more experience which could be used to mentor younger employees. This could even potentially reduce churn in the 25 to 35 year old age group. 
 3. Employees with no stock option plans churn more than employees with stock option plans. This provides an opportunity. Owning company stock is a siginificant motivator which could improve performance and employee attrition.  
 4. Other features such as job satisfaction, income, distance from home also play a role in employee attrition and should be addressed. 
 
