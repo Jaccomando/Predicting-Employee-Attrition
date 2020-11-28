@@ -65,7 +65,7 @@ K - Nearest Neighbor proves to perform best on test data with accuracy of .97 an
 ## Model Feature Importances
 Of my top three performing models, only Random Forest has a feature importances function from Scikit-learn. It identifies 'Age', 'DailyRate', 'MonthlyIncome', 'DistanceFromHome' and 'JobSatisfaction' as the top 5 feature importances. Assuming that 'DailyRate' and 'MonthlyIncome' are the same, we could find the next highly rated feature importance not related to salary which would be 'TotalWorkingYears'.
 
-### <center>"Feature Importances Model</center>
+### <center>Feature Importances Model</center>
 
 ![Feature Importances Model](/reports/figures/model_feat.png)
 
