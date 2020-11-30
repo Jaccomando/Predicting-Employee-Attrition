@@ -15,6 +15,9 @@ Employee churn is a significant expense for companies. The Society for Human Res
 # The Data
 The data set used for this project is the <a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset">IBM HR Analytics Employee Attrition & Performance dataset</a> from Kaggle and created by IBM. It contains 23,436 rows representing individual employees. There are 32 different features including age, education, gender, marital status, overtime worked, etc. Attrition is the target.
 
+## Reproduction Instructions
+The dataset may be downloaded from Kaggle <a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset">here.</a>
+
 ## Preparing the Data
 The dataset is a clean dataset with one CSV file. The CSV file is imported and converted to a Pandas data frames.
 
@@ -42,7 +45,7 @@ We see that 'Age', 'Stockoptionlevel', 'Yearsincurrentrole', 'Totalworkingyears'
 ![Attrition by Years in Role](/reports/figures/years_role_dist.png)
 
 ## Pre-processing
-I drop NAs, remove six columns that either contain no unique values, or are not useful for modeling, and convert the target "Attrition" to "Current employee" = 0, and "Voluntary Resignation" = 1. Next the target is split from the data and I create a train test split for training and eventually testing the model. Numeric column are isolated, scaled, and one hot encoded before being rejoined with categorical columns. The training data is then smoted in advance of the first simple model.  
+I drop NAs, remove six columns that either contain no unique values, or are not useful for modeling, and convert the target "Attrition" to "Current employee" = 0, and "Voluntary Resignation" = 1. Next the target is split from the data and I create a train test split and validation set for training, validating, and testing the model. Numeric columns are isolated, scaled, and one hot encoded before being rejoined with categorical columns. The training data is then smoted in advance of the first simple model.  
 
 # Models
 
@@ -62,9 +65,14 @@ K - Nearest Neighbor proves to perform best on test data with accuracy of .97 an
 ## Model Feature Importances
 Of my top three performing models, only Random Forest has a feature importances function from Scikit-learn. It identifies 'Age', 'DailyRate', 'MonthlyIncome', 'DistanceFromHome' and 'JobSatisfaction' as the top 5 feature importances. Assuming that 'DailyRate' and 'MonthlyIncome' are the same, we could find the next highly rated feature importance not related to salary which would be 'TotalWorkingYears'.
 
-### <center>"Feature Importances Model</center>
+### <center>Feature Importances Model</center>
 
 ![Feature Importances Model](/reports/figures/model_feat.png)
+
+## Future Development Ideas
+1. Build more models, including a Neural Network model.
+2. Explore the role gender plays in attrition. 
+3. Explore the role Covid 19 plays in attrition.
 
 # Summary
 By using CRISP - DM tecniques and machine learning algorithms I create a binary classification model with .97 accuracy. This model, used alongside an understanding of the business and employee base is helpful in accurately predicting when an employee will voluntarily leave the company. 
