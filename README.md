@@ -45,7 +45,7 @@ We see that 'Age', 'Stockoptionlevel', 'Yearsincurrentrole', 'Totalworkingyears'
 ![Attrition by Years in Role](/reports/figures/years_role_dist.png)
 
 ## Pre-processing
-I drop NAs, remove six columns that either contain no unique values, or are not useful for modeling, and convert the target "Attrition" to "Current employee" = 0, and "Voluntary Resignation" = 1. Next the target is split from the data and I create a train test split for training and eventually testing the model. Numeric column are isolated, scaled, and one hot encoded before being rejoined with categorical columns. The training data is then smoted in advance of the first simple model.  
+I drop NAs, remove six columns that either contain no unique values, or are not useful for modeling, and convert the target "Attrition" to "Current employee" = 0, and "Voluntary Resignation" = 1. Next the target is split from the data and I create a train test split and validation set for training, validating, and eventually testing the model. Numeric columns are isolated, scaled, and one hot encoded before being rejoined with categorical columns. The training data is then smoted in advance of the first simple model.  
 
 # Models
 
