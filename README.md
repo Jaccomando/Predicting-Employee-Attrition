@@ -70,9 +70,9 @@ Of my top three performing models, only Random Forest has a feature importances 
 ![Feature Importances Model](/reports/figures/model_feat.png)
 
 ## Future Development Ideas
-More work can be done with feature engineering. For example, analysis the role of gender plays in attrition. Also several features are relatable as compensation features. For example, 'DailyRate', 'HourlyRate', 'MonthlyRate', and 'MonthlyIncome' could perhaps be combined. And 'StockOptionLevel' and 'PercentSalaryHike' can be further explored. Also, there are several features related to time.  'YearsAtCompany', 'YearsInCurrentRole', 'YearsSinceLastPromotion', and 'YearsWithCurrManager' can be explored for additional trends.
-
-Additionally, once employee attrition data is available for 2020, it will be very interesting to explore what role, if any, Covid 19 plays in employee churn.
+1. Build more models, including a Neural Network Model.
+2. Explore the role gender plays in attrition. 
+3. Explore the role Covid 19 plays in attrition.
 
 # Summary
 By using CRISP - DM tecniques and machine learning algorithms I create a binary classification model with .97 accuracy. This model, used alongside an understanding of the business and employee base is helpful in accurately predicting when an employee will voluntarily leave the company. 
