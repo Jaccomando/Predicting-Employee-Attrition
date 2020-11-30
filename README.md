@@ -70,7 +70,7 @@ Of my top three performing models, only Random Forest has a feature importances 
 ![Feature Importances Model](/reports/figures/model_feat.png)
 
 ## Future Development Ideas
-1. Build more models, including a Neural Network Model.
+1. Build more models, including a Neural Network model.
 2. Explore the role gender plays in attrition. 
 3. Explore the role Covid 19 plays in attrition.
 
