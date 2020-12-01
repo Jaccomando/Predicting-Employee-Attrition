@@ -49,18 +49,21 @@ I drop NAs, remove six columns that either contain no unique values, or are not 
 
 # Models
 
+## Model Metrics
+I decide to use Accuracy and F-1 Score (a balance of Precision and Recall) as my primary metrics. In this business case, minimizing the number of False Negatives (the number of employees predicted to stay that actually leave) is important and is generally measured by a Recall Score. But a case can be made that minimizing False Positives (the number of employees predicted to leave that actually stay) is also important and is generally measured by a Precision Score. So an F-1 Score is considered to be a nice balanced metric between Precision and Recall. 
+
 ## First Simple Model
-Logistic Regression is used for a first simple model. After several attempts at tuning parameters, the model does not perform well on training or validation data. The accuracy score is .69 and an F1 score of .70. I decide to move onto other models which may be better suited to binary classification. 
+Logistic Regression is used for a first simple model. After several attempts at tuning parameters, the model does not perform well on training on training data. The accuracy score is .69 with an F1 score of .79. I decide to move onto other models which may be better suited to binary classification. 
 
 ## Additional Models
-I try Support Vector Machine, Random Forest Classifier, K Nearest Neighbor, and stacking Random Forest Classifer and K Nearest Neighbor as base learners with Logistic Regression as the meta learner. While the stacked model performs best on the validation data with 7 false negatives and 1 false positive as well as the complete training data with 0 false negatives and 2 false positives, it would not prove to do so on test data. 
+I try Support Vector Machine, Random Forest Classifier, K Nearest Neighbor, and stacking Random Forest Classifer and K Nearest Neighbor as base learners with Logistic Regression as the meta learner. The stacked model performs best on training and validatoin data yielding perfect accuracy and F-1 scores with Random Forest also performing well with a 98% accuracy and 99% F-1 score. 
 
 ## Best Model Evaluation
-K - Nearest Neighbor proves to perform best on test data with accuracy of .97 and F1 score of .98. It accurately predicts 3837 employees will not churn and that 674 will churn. It incorrectly predicts that 40 employees will churn when they actually stay, and that 90 employees will stay when they actually churn. 
+I decide to choose the Stacked Model as my best model and check it against test data. As expected it performs very well correctly predicting that 3,873 employees will not leave the company, and that 744 employees will leave the company. It incorrectly predicts that 4 employees will leave, when they actually stay and that 20 will stay when they actually leave.
 
-### <center>"K - Nearest Neighbor Confusion Matrix</center>
+### <center>"Stacked Model Confusion Matrix</center>
 
-![K - Nearest Neighbor Confusion Matrix](/reports/figures/knn_cm.png)
+![Stacked Model Confusion Matrix](/reports/figures//stacked.png)
 
 ## Model Feature Importances
 Of my top three performing models, only Random Forest has a feature importances function from Scikit-learn. It identifies 'Age', 'DailyRate', 'MonthlyIncome', 'DistanceFromHome' and 'JobSatisfaction' as the top 5 feature importances. Assuming that 'DailyRate' and 'MonthlyIncome' are the same, we could find the next highly rated feature importance not related to salary which would be 'TotalWorkingYears'.
