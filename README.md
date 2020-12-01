@@ -56,7 +56,7 @@ I decide to use Accuracy and F-1 Score (a balance of Precision and Recall) as my
 Logistic Regression is used for a first simple model. After several attempts at tuning parameters, the model does not perform well on training on training data. The accuracy score is .69 with an F1 score of .79. I decide to move onto other models which may be better suited to binary classification. 
 
 ## Additional Models
-I try Support Vector Machine, Random Forest Classifier, K Nearest Neighbor, and stacking Random Forest Classifer and K Nearest Neighbor as base learners with Logistic Regression as the meta learner. The stacked model performs best on training and validatoin data yielding perfect accuracy and F-1 scores with Random Forest also performing well with a 98% accuracy and 99% F-1 score. 
+I try Support Vector Machine, Random Forest Classifier, K Nearest Neighbor, and stacking Random Forest Classifer and K Nearest Neighbor as base learners with Logistic Regression as the meta learner. The stacked model performs best on training and validation data yielding perfect accuracy and F-1 scores with Random Forest also performing well with a 98% accuracy and 99% F-1 score. 
 
 ## Best Model Evaluation
 I decide to choose the Stacked Model as my best model and check it against test data. As expected it performs very well correctly predicting that 3,873 employees will not leave the company, and that 744 employees will leave the company. It incorrectly predicts that 4 employees will leave, when they actually stay and that 20 will stay when they actually leave.
@@ -66,19 +66,19 @@ I decide to choose the Stacked Model as my best model and check it against test 
 ![Stacked Model Confusion Matrix](/reports/figures//stacked.png)
 
 ## Model Feature Importances
-Of my top three performing models, only Random Forest has a feature importances function from Scikit-learn. It identifies 'Age', 'DailyRate', 'MonthlyIncome', 'DistanceFromHome' and 'JobSatisfaction' as the top 5 feature importances. Assuming that 'DailyRate' and 'MonthlyIncome' are the same, we could find the next highly rated feature importance not related to salary which would be 'TotalWorkingYears'.
+Of my top three performing models, only Random Forest has a feature importances function from Scikit-learn. It identifies 'Age', 'DailyRate', 'MonthlyIncome', 'JobRole_Research Scientist' and 'DistanceFromHome' as the top 5 feature importances. Assuming that 'DailyRate' and 'MonthlyIncome' are the same, we could find the next highly rated feature importance not related to salary which would be 'TotalWorkingYears'.
 
 ### <center>Feature Importances Model</center>
 
 ![Feature Importances Model](/reports/figures/model_feat.png)
 
 ## Future Development Ideas
-1. Build more models, including a Neural Network model.
-2. Explore the role gender plays in attrition. 
-3. Explore the role Covid 19 plays in attrition.
+1. Build more models, including Decision Tree, Naive Bayes, Boosting Classifiers, and a Neural Network model.
+2. Explore the role gender plays in attrition. Gender equality is a very important issue and it would be interesting to delve deeper into this dataset to specifically look at gender.
+3. Explore the role Covid 19 plays in attrition. Once data from 2020 is available it will be critical to analyze it. The workforce has changed in so many ways since March 2020 including many more people working remotely. How will this impact employee attrition?
 
 # Summary
-By using CRISP - DM tecniques and machine learning algorithms I create a binary classification model with .97 accuracy. This model, used alongside an understanding of the business and employee base is helpful in accurately predicting when an employee will voluntarily leave the company. 
+By using CRISP - DM tecniques and machine learning algorithms I create a binary classification model with .99 accuracy and a perfect F-1 Score. This model, used alongside an understanding of the business and employee base is helpful in accurately predicting when an employee will voluntarily leave the company. 
 
 My initial data exploration finds a close correlation between age and attrition. Additionally, it identifies stock option level, years in current role, total working years, and job level as in the top five highest correlated features to attrition. 
 
@@ -86,7 +86,7 @@ My model feature importances also identify age as a top five feature importance.
 
 # Recommendations
 1. Carefully evaluate employee age. More employee churn occurs between the ages of 25 and 35 years old so a company should focus on employees within that age group to monitor overall satisfaction. 
-2. Look at employee total working years. Employees with more total working years chrun more but also have more experience which could be used to mentor younger employees. This could even potentially reduce churn in the 25 to 35 year old age group. 
+2. Look at employee total working years. Employees with more total working years churn more but also have more experience which could be used to mentor younger employees. This could even potentially reduce churn in the 25 to 35 year old age group. 
 3. Employees with no stock option plans churn more than employees with stock option plans. This provides an opportunity. Owning company stock is a siginificant motivator which could improve performance and employee attrition.  
 4. Other features such as job satisfaction, income, distance from home also play a role in employee attrition and should be addressed. 
 
