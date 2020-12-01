@@ -3,7 +3,7 @@
 # Table of Contents
 
 ### Reports
-- [Presentation Notebook](https://github.com/Jaccomando/Predicting-Employee-Attrition/blob/main/notebooks/Final_Notebook-Copy1.ipynb)
+- [Presentation Notebook](https://github.com/Jaccomando/Predicting-Employee-Attrition/blob/main/notebooks/Final_Notebook.ipynb)
 - [Presentation Slides](https://github.com/Jaccomando/Predicting-Employee-Attrition/blob/main/reports/Capstone_Presentation.pdf)
 
 ### Exploratory Notebook
