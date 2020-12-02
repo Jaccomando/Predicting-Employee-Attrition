@@ -13,19 +13,19 @@
 Employee churn is a significant expense for companies. The Society for Human Resource Management estimates the average replacement cost of a salaried employee is the equivalent of six to nine months’ salary. Creating a classification model to help better predict when an employee is a flight risk will help management identify flight risk employees before they leave the company allowing for an opportunity to intervene early. This can help reduce employee churn and the the cost of replacing and training new employees.
 
 # The Data
-The data set used for this project is the <a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset">IBM HR Analytics Employee Attrition & Performance dataset</a> from Kaggle and created by IBM. It contains 23,436 rows representing individual employees. There are 32 different features including age, education, gender, marital status, overtime worked, etc. Attrition is the target.
+The data set used for this project is the <a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset">IBM HR Analytics Employee Attrition & Performance dataset</a> from Kaggle and created by IBM. It contains 23,436 rows representing individual employees. There are 32 different features including age, education, gender, marital status, overtime worked, and many more. Attrition is the target.
 
 ## Reproduction Instructions
-The dataset may be downloaded from Kaggle <a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset">here.</a> It should be placed in a data folder. Pandas or SQL or another computational technique will need to be used to work with the data.
+The dataset can be downloaded from Kaggle <a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset">here.</a> It should be placed in a data folder. Pandas, SQL, or another computational technique will need to be used to work with the data.
 
 ## Preparing the Data
-The dataset is a clean dataset with one CSV file. The CSV file is imported and converted to a Pandas data frames.
+The dataset is a clean dataset with one CSV file. The CSV file is imported and converted to a Pandas data frame.
 
 ## Exploratory Data Analysis (EDA)
-CRISP - DM techniques are used to understand and prepare the data for modeling. Initial EDA reveals a relatively clean dataset with easy to understand rows and columns with few missing values.
+CRISP - DM techniques are used to understand and prepare the data for modeling. Initial EDA reveals a relatively clean dataset with easy to understand rows, and columns with few missing values.
 
 ## Visualizing the Data
-I am interested in identifying the top correlations to the target "Attrition" as I will want to compare them to the models' top features. 
+I am interested in identifying the top correlations to the target "Attrition" as I will want to compare them to the model's top features. 
 We see that 'Age', 'Stockoptionlevel', 'Yearsincurrentrole', 'Totalworkingyears', and 'Joblevel' are the highest correlated features. 
 
 ### <center>Feature Correlations to Attrition</center>
@@ -53,7 +53,7 @@ I drop NAs, remove six columns that either contain no unique values, or are not 
 I decide to use Accuracy and F-1 Score (a balance of Precision and Recall) as my primary metrics. In this business case, minimizing the number of False Negatives (the number of employees predicted to stay that actually leave) is important and is generally measured by a Recall Score. But a case can be made that minimizing False Positives (the number of employees predicted to leave that actually stay) is also important and is generally measured by a Precision Score. So an F-1 Score is considered to be a nice balanced metric between Precision and Recall. 
 
 ## First Simple Model
-Logistic Regression is used for a first simple model. After several attempts at tuning parameters, the model does not perform well on training on training data. The accuracy score is .69 with an F1 score of .79. I decide to move onto other models which may be better suited to binary classification. 
+Logistic Regression is used for a first simple model. After several attempts at tuning parameters, the model does not perform well on training data. The accuracy score is .69 with an F1 score of .79. I decide to move onto other models which may be better suited to binary classification. 
 
 ## Additional Models
 I try Support Vector Machine, Random Forest Classifier, K Nearest Neighbor, and stacking Random Forest Classifer and K Nearest Neighbor as base learners with Logistic Regression as the meta learner. The stacked model performs best on training and validation data yielding perfect accuracy and F-1 scores with Random Forest also performing well with a 98% accuracy and 99% F-1 score. 
@@ -66,7 +66,7 @@ I decide to choose the Stacked Model as my final model and check it against test
 ![Stacked Model Confusion Matrix](/reports/figures//stacked.png)
 
 ## Model Feature Importances
-Of my top three performing models, only Random Forest has a feature importances function from Scikit-learn. It identifies 'Age', 'DailyRate', 'MonthlyIncome', 'JobRole_Research Scientist' and 'DistanceFromHome' as the top 5 feature importances. Assuming that 'DailyRate' and 'MonthlyIncome' are the same, we could find the next highly rated feature importance not related to salary which would be 'TotalWorkingYears'.
+Of my top performing models, only Random Forest has a feature importances function from Scikit-learn. It identifies 'Age', 'DailyRate', 'MonthlyIncome', 'JobRole_Research Scientist' and 'DistanceFromHome' as the top 5 feature importances. Assuming that 'DailyRate' and 'MonthlyIncome' are the same, we could find the next highly rated feature importance not related to salary which would be 'TotalWorkingYears'.
 
 ### <center>Feature Importances Model</center>
 
@@ -75,7 +75,7 @@ Of my top three performing models, only Random Forest has a feature importances 
 ## Future Development Ideas
 1. Build more models, including Decision Tree, Naive Bayes, Boosting Classifiers, and a Neural Network model.
 2. Explore the role gender plays in attrition. Gender equality is a very important issue and it would be interesting to delve deeper into this dataset to specifically look at gender.
-3. Explore the role Covid 19 plays in attrition. Once data from 2020 is available it will be critical to analyze it. The workforce has changed in so many ways since March 2020 including many more people working remotely. How will this impact employee attrition?
+3. Explore the role COVID-19 plays in attrition. Once data from 2020 is available it will be critical to analyze it. The workforce has changed in so many ways since March 2020 including many more people working remotely. How will this impact employee attrition?
 
 # Summary
 By using CRISP - DM tecniques and machine learning algorithms I create a binary classification model with .99 accuracy and a perfect F-1 Score. This model, used alongside an understanding of the business and employee base is helpful in accurately predicting when an employee will voluntarily leave the company. 
