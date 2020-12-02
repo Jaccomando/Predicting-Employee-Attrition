@@ -61,7 +61,7 @@ I try Support Vector Machine, Random Forest Classifier, K Nearest Neighbor, and 
 ## Best Model Evaluation
 I decide to choose the Stacked Model as my best model and check it against test data. As expected it performs very well correctly predicting that 3,873 employees will not leave the company, and that 744 employees will leave the company. It incorrectly predicts that 4 employees will leave, when they actually stay and that 20 will stay when they actually leave.
 
-### <center>"Stacked Model Confusion Matrix</center>
+### <center>Stacked Model Confusion Matrix</center>
 
 ![Stacked Model Confusion Matrix](/reports/figures//stacked.png)
 
