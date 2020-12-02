@@ -1,6 +1,6 @@
 # Predicting-Employee-Attrition
 
-# Table of Contents
+## Table of Contents
 
 ### Reports
 - [Presentation Notebook](https://github.com/Jaccomando/Predicting-Employee-Attrition/blob/main/notebooks/Final_Notebook.ipynb)
@@ -58,8 +58,8 @@ Logistic Regression is used for a first simple model. After several attempts at 
 ## Additional Models
 I try Support Vector Machine, Random Forest Classifier, K Nearest Neighbor, and stacking Random Forest Classifer and K Nearest Neighbor as base learners with Logistic Regression as the meta learner. The stacked model performs best on training and validation data yielding perfect accuracy and F-1 scores with Random Forest also performing well with a 98% accuracy and 99% F-1 score. 
 
-## Best Model Evaluation
-I decide to choose the Stacked Model as my best model and check it against test data. As expected it performs very well correctly predicting that 3,873 employees will not leave the company, and that 744 employees will leave the company. It incorrectly predicts that 4 employees will leave, when they actually stay and that 20 will stay when they actually leave.
+## Final Model Evaluation
+I decide to choose the Stacked Model as my final model and check it against test data. As expected it performs very well correctly predicting that 3,873 employees will not leave the company, and that 744 employees will leave the company. It incorrectly predicts that 4 employees will leave, when they actually stay and that 20 will stay when they actually leave.
 
 ### <center>Stacked Model Confusion Matrix</center>
 
