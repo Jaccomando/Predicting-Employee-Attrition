@@ -16,7 +16,7 @@ Employee churn is a significant expense for companies. The Society for Human Res
 The data set used for this project is the <a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset">IBM HR Analytics Employee Attrition & Performance dataset</a> from Kaggle and created by IBM. It contains 23,436 rows representing individual employees. There are 32 different features including age, education, gender, marital status, overtime worked, etc. Attrition is the target.
 
 ## Reproduction Instructions
-The dataset may be downloaded from Kaggle <a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset">here.</a>
+The dataset may be downloaded from Kaggle <a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset">here.</a> It should be placed in a data folder. Pandas or SQL or another computational technique will need to be used to work with the data.
 
 ## Preparing the Data
 The dataset is a clean dataset with one CSV file. The CSV file is imported and converted to a Pandas data frames.
